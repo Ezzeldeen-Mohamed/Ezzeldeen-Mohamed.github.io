@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ezzeldeen Mohamed - .NET Backend Developer specializing in ASP.NET Core, Flutter, and scalable web solutions.">
+    <meta name="description"
+        content="Ezzeldeen Mohamed - .NET Backend Developer specializing in ASP.NET Core, Flutter, and scalable web solutions.">
     <meta name="keywords" content=".NET, Flutter, backend developer, web developer, portfolio">
     <meta name="author" content="Ezzeldeen Mohamed">
     <title>Ezzeldeen Mohamed | .NET Backend Developer</title>
@@ -13,485 +15,510 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-:root {
-    --primary-color: #065f46;
-    --secondary-color: #facc15;
-    --dark-color: #1a1a1a;
-    --light-gray: #e5e7eb;
-}
+        :root {
+            --primary-color: #065f46;
+            --secondary-color: #facc15;
+            --dark-color: #1a1a1a;
+            --light-gray: #e5e7eb;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--dark-color);
-    color: var(--light-gray);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-color);
+            color: var(--light-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-.hero {
-    position: relative;
-    min-height: 100vh;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 70%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden;
-}
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            overflow: hidden;
+        }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 1rem;
-}
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
 
-.hero .subtitle {
-    font-size: 1.5rem;
-    color: var(--light-gray);
-}
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--light-gray);
+        }
 
-.profile-img {
-    width: 430px;
-    height: 430px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--secondary-color);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
+        .profile-img {
+            width: 430px;
+            height: 430px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
 
-.profile-img:hover {
-    transform: scale(1.15);
-    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.5);
-    border-color: var(--primary-color);
-}
+        .profile-img:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.5);
+            border-color: var(--primary-color);
+        }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: var(--secondary-color);
-    transition: width 0.3s ease;
-}
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
 
-.nav-link:hover::after {
-    width: 100%;
-}
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-.skill-card {
-    background-color: #2a2a2a;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
+        .skill-card {
+            background-color: #2a2a2a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-}
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
 
-.skill-item {
-    margin-bottom: 1rem;
-}
+        .skill-item {
+            margin-bottom: 1rem;
+        }
 
-.skill-bar {
-    height: 8px;
-    background-color: #3a3a3a;
-    border-radius: 4px;
-    overflow: hidden;
-}
+        .skill-bar {
+            height: 8px;
+            background-color: #3a3a3a;
+            border-radius: 4px;
+            overflow: hidden;
+        }
 
-.skill-level {
-    height: 100%;
-    background-color: var(--secondary-color);
-    border-radius: 4px;
-    transition: width 1.5s ease-in-out;
-}
+        .skill-level {
+            height: 100%;
+            background-color: var(--secondary-color);
+            border-radius: 4px;
+            transition: width 1.5s ease-in-out;
+        }
 
-.project-card {
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-}
+        .project-card {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
 
-.project-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
+        .project-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
 
-.project-image {
-    height: 192px;
-    background-color: #4b4b4b;
-    overflow: hidden;
-}
+        .project-image {
+            height: 192px;
+            background-color: #4b4b4b;
+            overflow: hidden;
+        }
 
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
 
-.project-card:hover .project-image img {
-    transform: scale(1.05);
-}
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
 
-.section-title::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background-color: var(--secondary-color);
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-.social-icons a {
-    font-size: 2rem;
-    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-}
+        .social-icons a {
+            font-size: 2rem;
+            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+        }
 
-.social-icons a:hover {
-    transform: scale(1.2);
-    color: var(--secondary-color);
-    text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
-}
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: var(--secondary-color);
+            text-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+        }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--light-gray);
-    border-radius: 5px;
-    background-color: #3a3a3a;
-    color: var(--light-gray);
-    font-family: 'Poppins', sans-serif;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            background-color: #3a3a3a;
+            color: var(--light-gray);
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
-}
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 5px rgba(250, 204, 21, 0.5);
+        }
 
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    text-align: center;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
 
-.btn:hover {
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: 0 0 10px rgba(6, 95, 70, 0.5);
-}
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 0 10px rgba(6, 95, 70, 0.5);
+        }
 
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
-}
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
 
-.btn-outline:hover {
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-    box-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
-}
+        .btn-outline:hover {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            box-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
+        }
 
-.btn-small {
-    padding: 8px 16px;
-    font-size: 14px;
-}
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
 
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease;
-}
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
 
-.loader.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-.loader-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid var(--secondary-color);
-    border-top: 5px solid transparent;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--secondary-color);
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: var(--secondary-color);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
 
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--secondary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
 
-.timeline-item:nth-child(odd) {
-    left: 0;
-}
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
 
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
 
-.timeline-date {
-    padding: 8px 15px;
-    background-color: var(--secondary-color);
-    color: var(--dark-color);
-    border-radius: 20px;
-    font-weight: 500;
-    position: absolute;
-    top: 10px;
-    right: -75px;
-    text-align: center;
-    width: 150px;
-}
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
 
-.timeline-item:nth-child(even) .timeline-date {
-    left: -75px;
-}
+        .timeline-date {
+            padding: 8px 15px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border-radius: 20px;
+            font-weight: 500;
+            position: absolute;
+            top: 10px;
+            right: -75px;
+            text-align: center;
+            width: 150px;
+        }
 
-.timeline-content {
-    padding: 20px;
-    background-color: #2a2a2a;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+        .timeline-item:nth-child(even) .timeline-date {
+            left: -75px;
+        }
 
-.certification-card {
-    display: flex;
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    gap: 1rem;
-}
+        .timeline-content {
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
 
-.certification-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(250, 204, 21, 0.5);
-}
+        .certification-card {
+            display: flex;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            gap: 1rem;
+        }
 
-.contact-item {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    align-items: flex-start;
-    background-color: #2a2a2a;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(250, 204, 21, 0.5);
+        }
 
-.project-tech span {
-    background-color: #3a3a3a;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    color: var(--light-gray);
-}
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+            background-color: #2a2a2a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
 
-.footer-links a:hover {
-    color: var(--secondary-color);
-}
+        .project-tech span {
+            background-color: #3a3a3a;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            color: var(--light-gray);
+        }
 
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-    .hero .subtitle {
-        font-size: 1.3rem;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-}
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .hero .subtitle {
-        font-size: 1.2rem;
-    }
-    .profile-img {
-        width: 350px;
-        height: 350px;
-    }
-    .hero-content {
-        padding: 1rem;
-    }
-    .navigation {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: var(--dark-color);
-        padding: 1rem;
-        z-index: 50;
-    }
-    .navigation.active {
-        display: flex;
-    }
-    .menu-toggle {
-        display: block;
-    }
-    .skill-card,
-    .certification-card {
-        margin-bottom: 1rem;
-    }
-    .social-icons a {
-        font-size: 1.5rem;
-    }
-    .timeline::before {
-        left: 31px;
-    }
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-    .timeline-date {
-        right: auto;
-        left: 15px;
-    }
-}
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
 
-@media (max-width: 576px) {
-    .hero {
-        padding: 80px 15px;
-    }
-    .profile-img {
-        width: 300px;
-        height: 300px;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero .subtitle {
-        font-size: 1rem;
-    }
-    .section-title {
-        font-size: 1.8rem;
-    }
-    .project-image {
-        height: 160px;
-    }
-}
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .profile-img {
+                width: 350px;
+                height: 350px;
+            }
+
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .navigation {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-color);
+                padding: 1rem;
+                z-index: 50;
+            }
+
+            .navigation.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .skill-card,
+            .certification-card {
+                margin-bottom: 1rem;
+            }
+
+            .social-icons a {
+                font-size: 1.5rem;
+            }
+
+            .timeline::before {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-date {
+                right: auto;
+                left: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 15px;
+            }
+
+            .profile-img {
+                width: 300px;
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .project-image {
+                height: 160px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="loader">
         <div class="loader-spinner"></div>
@@ -520,16 +547,22 @@ body {
             <img src="./images/me_profile.png" alt="Ezzeldeen Mohamed" class="profile-img">
             <h1 id="typewriter" class="font-bold"></h1>
             <p class="subtitle">.NET Backend Developer</p>
-            <p class="mt-2"><a href="https://drive.google.com/file/d/19skw5n1K3lmxVxJ2DILwwz8Pm7JAr324/view?usp=drive_link" target="_blank" style="color: #72fdd6;" class="text-secondary-color hover:text-primary-color">View My CV</a></p>
+            <p class="mt-2"><a href="https://drive.google.com/file/d/1cQq4BU4H3LmDLsshXhsy-EoGR-xzeCQs/view?usp=sharing"
+                    target="_blank" style="color: #72fdd6;" class="text-secondary-color hover:text-primary-color">View
+                    My CV</a></p>
             <div class="mt-8 flex justify-center gap-4">
                 <a href="#projects" class="btn">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
             <div class="social-icons mt-6 flex justify-center gap-8">
-                <a href="https://github.com/Ezzeldeen-Mohamed" target="_blank" class="text-white hover:text-secondary-color"><i class="fab fa-github"></i></a>
-                <a href="http://www.linkedin.com/in/ezzeldeenmohamed" target="_blank" class="text-white hover:text-secondary-color"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:ezzm80618@gmail.com" class="text-white hover:text-secondary-color"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+201150682120" class="text-white hover:text-secondary-color"><i class="fas fa-phone"></i></a>
+                <a href="https://github.com/Ezzeldeen-Mohamed" target="_blank"
+                    class="text-white hover:text-secondary-color"><i class="fab fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/ezzeldeenmohamed" target="_blank"
+                    class="text-white hover:text-secondary-color"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:ezzm80618@gmail.com" class="text-white hover:text-secondary-color"><i
+                        class="fas fa-envelope"></i></a>
+                <a href="tel:+201150682120" class="text-white hover:text-secondary-color"><i
+                        class="fas fa-phone"></i></a>
             </div>
         </div>
     </section>
@@ -539,15 +572,20 @@ body {
             <h2 class="section-title">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="skill-card">
-                    <p>Dedicated .NET Backend Developer skilled in building scalable and secure web applications using ASP.NET Core and Clean Architecture. Proficient in RESTful APIs, SQL Server, and cybersecurity practices. Experienced in Flutter for cross-platform mobile development.</p>
-                    <p>Delivered impactful projects like Smart_Charging_System ,Tawlity and BookStoreAPIs, significantly enhancing performance. Recognized in IYMC, ECPC, and ISF competitions. Committed to innovation and continuous learning.</p>
+                    <p>Dedicated .NET Backend Developer skilled in building scalable and secure web applications using
+                        ASP.NET Core and Clean Architecture. Proficient in RESTful APIs, SQL Server, and cybersecurity
+                        practices. Experienced in Flutter for cross-platform mobile development.</p>
+                    <p>Delivered impactful projects like Smart_Charging_System ,Tawlity and BookStoreAPIs, significantly
+                        enhancing performance. Recognized in IYMC, ECPC, and ISF competitions. Committed to innovation
+                        and continuous learning.</p>
                 </div>
                 <div class="skill-card">
                     <div class="detail-item mb-4">
                         <i class="fas fa-graduation-cap text-secondary-color text-2xl"></i>
                         <div>
                             <h4 class="text-lg font-semibold">Education</h4>
-                            <p>High School Diploma, Expected 07/2025<br>El Sewedy International School for Applied Technology and Software, Giza, Egypt</p>
+                            <p>High School Diploma, Expected 07/2025<br>El Sewedy International School for Applied
+                                Technology and Software, Giza, Egypt</p>
                         </div>
                     </div>
                     <div class="detail-item">
@@ -562,81 +600,83 @@ body {
         </div>
     </section>
 
-<section id="experience" class="section py-16 bg-gray-800">
-    <div class="container mx-auto px-4">
-        <h2 class="section-title">Work Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content">
-                    <h3>.NET Backend Developer</h3>
-                    <br>
-                    <h4>Elsewedy Electrometer, Remote</h4>
-                    <ul class="space-y-2">
-                        <li>Developed 20+ RESTful APIs, significantly enhancing performance.</li>
-                        <li>Integrated third-party APIs for improved platform functionality.</li>
-                        <li>Optimized frontend-backend integration using Clean Architecture.</li>
-                    </ul>
+    <section id="experience" class="section py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>.NET Backend Developer</h3>
+                        <br>
+                        <h4>Elsewedy Electrometer, Remote</h4>
+                        <ul class="space-y-2">
+                            <li>Developed 20+ RESTful APIs, significantly enhancing performance.</li>
+                            <li>Integrated third-party APIs for improved platform functionality.</li>
+                            <li>Optimized frontend-backend integration using Clean Architecture.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content">
-                    <br>
-                    <h3>Freelance .NET Developer</h3>
-                    <br>
-                    <h4>Self-employed, Remote</h4>
-                    <ul class="space-y-2">
-                        <li>Built backend systems for e-commerce and ticketing platforms using ASP.NET Core.</li>
-                        <li>Implemented secure OAuth and JWT authentication flows.</li>
-                        <li>Collaborated with frontend developers on full-stack solutions.</li>
-                    </ul>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <br>
+                        <h3>Freelance .NET Developer</h3>
+                        <br>
+                        <h4>Self-employed, Remote</h4>
+                        <ul class="space-y-2">
+                            <li>Built backend systems for e-commerce and ticketing platforms using ASP.NET Core.</li>
+                            <li>Implemented secure OAuth and JWT authentication flows.</li>
+                            <li>Collaborated with frontend developers on full-stack solutions.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">2024</div>
-                <div class="timeline-content">
-                    <h3>.NET Backend Developer</h3>
-                    <br>
-                    <h4>Elsewedy Electrometer, Giza, Egypt</h4>
-                    <ul class="space-y-2">
-                        <li>Contributed to RMS HR system, adding attendance and vacation features.</li>
-                        <li>Enhanced system efficiency using Entity Framework Core.</li>
-                        <li>Worked with HR staff for testing and feedback.</li>
-                    </ul>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>.NET Backend Developer</h3>
+                        <br>
+                        <h4>Elsewedy Electrometer, Giza, Egypt</h4>
+                        <ul class="space-y-2">
+                            <li>Contributed to RMS HR system, adding attendance and vacation features.</li>
+                            <li>Enhanced system efficiency using Entity Framework Core.</li>
+                            <li>Worked with HR staff for testing and feedback.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">2025</div>
-                <div class="timeline-content">
-                    <br>
-                    <h3>.NET Backend Developer</h3>
-                    <br>
-                    <h4>Elsewedy Electrometer, Remote</h4>
-                    <ul class="space-y-2">
-                        <li>Built a Smart Charging System using ASP.NET Core and Clean Architecture.</li>
-                        <li>Implemented JWT authentication with refresh tokens for secure access.</li>
-                        <li>Automated contract closure using Hangfire background jobs.</li>
-                        <li>Added Excel/PDF reporting for customer and contract data.</li>
-                        <li>Wrote unit and integration tests to ensure system reliability.</li>
-                    </ul>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <br>
+                        <h3>.NET Backend Developer</h3>
+                        <br>
+                        <h4>Elsewedy Electrometer, Remote</h4>
+                        <ul class="space-y-2">
+                            <li>Built a Smart Charging System using ASP.NET Core and Clean Architecture.</li>
+                            <li>Implemented JWT authentication with refresh tokens for secure access.</li>
+                            <li>Automated contract closure using Hangfire background jobs.</li>
+                            <li>Added Excel/PDF reporting for customer and contract data.</li>
+                            <li>Wrote unit and integration tests to ensure system reliability.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="projects" class="section py-16 bg-gray-800">
         <div class="container mx-auto px-4">
             <h2 class="section-title">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div class="project-card" data-tilt>
+                <div class="project-card" data-tilt>
                     <div class="project-image">
                         <img src="./images/Smartchargingsystem.png" alt="Smart Charging System Project">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Smart Charging System</h3>
-                        <p class="mt-2 text-gray-300">Smart energy management system using ASP.NET Core 8 and Clean Architecture. Included JWT authentication, Hangfire background jobs, Excel/PDF reporting, and unit & integration testing.</p>
+                        <p class="mt-2 text-gray-300">Smart energy management system using ASP.NET Core 8 and Clean
+                            Architecture. Included JWT authentication, Hangfire background jobs, Excel/PDF reporting,
+                            and unit & integration testing.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>.NET Core</span>
                             <span>Clean Architecture</span>
@@ -646,7 +686,8 @@ body {
                             <span>Unit Testing</span>
                             <span>Integration Testing</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/company-smart-charging-system" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/company-smart-charging-system" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -655,7 +696,8 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Tawlity</h3>
-                        <p class="mt-2 text-gray-300">Full-stack restaurant reservation system using ASP.NET Core and SQL Server. Supported 1,000+ users with JWT/OAuth authentication and real-time bookings.</p>
+                        <p class="mt-2 text-gray-300">Full-stack restaurant reservation system using ASP.NET Core and
+                            SQL Server. Supported 1,000+ users with JWT/OAuth authentication and real-time bookings.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>ASP.NET Core</span>
                             <span>SQL Server</span>
@@ -663,7 +705,8 @@ body {
                             <span>Real-time</span>
                             <span>Angular</span>
                         </div>
-                        <a href="https://tawlity.netlify.app/" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://tawlity.netlify.app/" target="_blank" class="btn btn-small mt-4">View
+                            Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -672,13 +715,15 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">BookStoreAPIs</h3>
-                        <p class="mt-2 text-gray-300">Scalable bookstore API using .NET Core and Clean Architecture. Featured JWT, SOLID principles, and custom middleware for secure design.</p>
+                        <p class="mt-2 text-gray-300">Scalable bookstore API using .NET Core and Clean Architecture.
+                            Featured JWT, SOLID principles, and custom middleware for secure design.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>.NET Core</span>
                             <span>Clean Architecture</span>
                             <span>SOLID</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/BookStorer/tree/master/BookStore" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/BookStorer/tree/master/BookStore" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -687,13 +732,15 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Managing Movie Collection</h3>
-                        <p class="mt-2 text-gray-300">Movie management API using ASP.NET Core and SQL Server. Implemented JWT authentication and robust exception handling.</p>
+                        <p class="mt-2 text-gray-300">Movie management API using ASP.NET Core and SQL Server.
+                            Implemented JWT authentication and robust exception handling.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>ASP.NET Core</span>
                             <span>SQL Server</span>
                             <span>JWT</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/Ecomereser" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/Ecomereser" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -702,14 +749,16 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">My Health</h3>
-                        <p class="mt-2 text-gray-300">IoT and AI-based health monitoring app using Firebase. Enabled real-time vital sign tracking for personalized healthcare.</p>
+                        <p class="mt-2 text-gray-300">IoT and AI-based health monitoring app using Firebase. Enabled
+                            real-time vital sign tracking for personalized healthcare.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>IoT</span>
                             <span>AI</span>
                             <span>Firebase</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/sehety" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/sehety" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -718,13 +767,15 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Shop App</h3>
-                        <p class="mt-2 text-gray-300">Built with Flutter and Cubit for state management. Fetches real-time product data via APIs, featuring a shopping cart and user authentication.</p>
+                        <p class="mt-2 text-gray-300">Built with Flutter and Cubit for state management. Fetches
+                            real-time product data via APIs, featuring a shopping cart and user authentication.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>Cubit</span>
                             <span>APIs</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/e-commerce" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/e-commerce" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -733,13 +784,15 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Tec Tac Toc App</h3>
-                        <p class="mt-2 text-gray-300">Note-taking app with persistent storage using a database and state management. Includes routing for seamless navigation.</p>
+                        <p class="mt-2 text-gray-300">Note-taking app with persistent storage using a database and state
+                            management. Includes routing for seamless navigation.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>Database</span>
                             <span>State Management</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/gamexo" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/gamexo" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -748,13 +801,15 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Prayer Time App</h3>
-                        <p class="mt-2 text-gray-300">A Flutter app that provides prayer times based on the user's location, with a beautiful UI and notifications.</p>
+                        <p class="mt-2 text-gray-300">A Flutter app that provides prayer times based on the user's
+                            location, with a beautiful UI and notifications.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>Database</span>
                             <span>State Management</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/Prayertimenow" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/Prayertimenow" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -763,13 +818,15 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">To-Do List App</h3>
-                        <p class="mt-2 text-gray-300">Cross-platform Flutter app with task management, SQLite storage, and interactive components like floating action buttons.</p>
+                        <p class="mt-2 text-gray-300">Cross-platform Flutter app with task management, SQLite storage,
+                            and interactive components like floating action buttons.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>SQLite</span>
                             <span>UI Components</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/todolist" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/todolist" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
                 <div class="project-card" data-tilt>
@@ -778,28 +835,32 @@ body {
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">BMI Calculator App</h3>
-                        <p class="mt-2 text-gray-300">Flutter-based BMI calculator with interactive inputs for gender, height, weight, and age, displaying results on a separate screen.</p>
+                        <p class="mt-2 text-gray-300">Flutter-based BMI calculator with interactive inputs for gender,
+                            height, weight, and age, displaying results on a separate screen.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>UI/UX</span>
                             <span>Interactive Inputs</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/BMI" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/BMI" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
-                            <div class="project-card" data-tilt>
+                <div class="project-card" data-tilt>
                     <div class="project-image">
                         <img src="./Images/rondomuser.png" alt="Random User App">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white">Random User App</h3>
-                        <p class="mt-2 text-gray-300">Flutter-based app that generates random user profiles with images, names, and other details.</p>
+                        <p class="mt-2 text-gray-300">Flutter-based app that generates random user profiles with images,
+                            names, and other details.</p>
                         <div class="project-tech mt-2 flex flex-wrap gap-2">
                             <span>Flutter</span>
                             <span>UI/UX</span>
                             <span>Random User API</span>
                         </div>
-                        <a href="https://github.com/Ezzeldeen-Mohamed/rondomdio" target="_blank" class="btn btn-small mt-4">View Details</a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed/rondomdio" target="_blank"
+                            class="btn btn-small mt-4">View Details</a>
                     </div>
                 </div>
             </div>
@@ -814,126 +875,178 @@ body {
                     <h3 class="text-xl font-semibold text-secondary-color mb-4">Programming Languages</h3>
                     <div class="skill-item">
                         <span>C#</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>C++</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Dart</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 67%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 67%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Python</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 60%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>JavaScript</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 65%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-card">
                     <h3 class="text-xl font-semibold text-secondary-color mb-4">Frameworks & Libraries</h3>
                     <div class="skill-item">
                         <span>ASP.NET Core</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Entity Framework Core</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Flutter</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-card">
                     <h3 class="text-xl font-semibold text-secondary-color mb-4">Tools & Technologies</h3>
                     <div class="skill-item">
                         <span>SQL Server</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Git</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Postman</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Firebase</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Stored Procedures</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 60%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-card">
                     <h3 class="text-xl font-semibold text-secondary-color mb-4">Concepts</h3>
                     <div class="skill-item">
                         <span>Clean Architecture</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>RESTful APIs</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>JWT Authentication</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>SOLID Principles</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>OAuth 2.0</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                 </div>
 
-                 <div class="skill-card">
+                <div class="skill-card">
                     <h3 class="text-xl font-semibold text-secondary-color mb-4">Additional Concepts</h3>
-                          <div class="skill-item">
+                    <div class="skill-item">
                         <span>Middleware (Exception & Logging)</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Dependency Injection</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Soft Delete & Global Query Filters</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Localization</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 65%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%"></div>
+                        </div>
                     </div>
-                </div>  
+                </div>
 
                 <div class="skill-card">
                     <h3 class="text-xl font-semibold text-secondary-color mb-4">Soft Skills</h3>
                     <div class="skill-item">
                         <span>Teamwork</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 80%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Presentation Skills</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 70%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
                     </div>
-                     <div class="skill-item">
+                    <div class="skill-item">
                         <span>Time Management</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 66%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 66%"></div>
+                        </div>
                     </div>
                     <div class="skill-item">
                         <span>Communication Skills</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 60%"></div></div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -942,7 +1055,8 @@ body {
         <div class="container mx-auto px-4">
             <h2 class="section-title">Certifications & Achievements</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <a href="https://drive.google.com/file/d/1LyXMcfOW5356FMVjphslCoGGqk8cynl0/view?usp=sharing" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/1LyXMcfOW5356FMVjphslCoGGqk8cynl0/view?usp=sharing"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
                         <i class="fas fa-trophy text-secondary-color"></i>
                     </div>
@@ -951,7 +1065,8 @@ body {
                         <p class="text-gray-300">Awarded for 1st place in Energy category in Giza (2025)</p>
                     </div>
                 </a>
-                <a href="https://drive.google.com/file/d/16oX8vmsmlt3NSzmL1Xo6ySQsRjc-Q9Ol/view?usp=sharing" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/16oX8vmsmlt3NSzmL1Xo6ySQsRjc-Q9Ol/view?usp=sharing"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
                         <i class="fas fa-medal text-secondary-color"></i>
                     </div>
@@ -960,7 +1075,8 @@ body {
                         <p class="text-gray-300">Certified for programming contest participation (2024)</p>
                     </div>
                 </a>
-                <a href="https://drive.google.com/file/d/1z_FhS2x1n34fnHlZ6aTwmH_1YyOCe94l/view?usp=sharing" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/1z_FhS2x1n34fnHlZ6aTwmH_1YyOCe94l/view?usp=sharing"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
                         <i class="fas fa-award text-secondary-color"></i>
                     </div>
@@ -969,25 +1085,30 @@ body {
                         <p class="text-gray-300">Recognized for global math challenge (2024)</p>
                     </div>
                 </a>
-                <a href="https://drive.google.com/file/d/10bq1oZqIedFdXC0V1ZZm_wqCBYDnGUdl/view?usp=sharing" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/10bq1oZqIedFdXC0V1ZZm_wqCBYDnGUdl/view?usp=sharing"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
                         <i class="fas fa-shield-alt text-secondary-color"></i>
                     </div>
                     <div class="certification-content">
                         <h3 class="text-lg font-semibold text-white">Cybersecurity Bootcamp</h3>
-                        <p class="text-gray-300">5-day boot camp on phishing and IoT security by Cyberx World (NTI) (2024)</p>
+                        <p class="text-gray-300">5-day boot camp on phishing and IoT security by Cyberx World (NTI)
+                            (2024)</p>
                     </div>
                 </a>
-                <a href="https://drive.google.com/file/d/1iSAu9NqxbnZVY7UtL-x6PSI6zqaYGPA0/view?usp=sharing" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/1iSAu9NqxbnZVY7UtL-x6PSI6zqaYGPA0/view?usp=sharing"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
                         <i class="fas fa-lightbulb text-secondary-color"></i>
                     </div>
                     <div class="certification-content">
                         <h3 class="text-lg font-semibold text-white">Tech Tank</h3>
-                        <p class="text-gray-300">Recognized for innovative project by National Research Center (2025)</p>
+                        <p class="text-gray-300">Recognized for innovative project by National Research Center (2025)
+                        </p>
                     </div>
                 </a>
-                <a href="https://drive.google.com/file/d/19VcsGub-6nBnlHdQg2KnhNZiPAFmj2n-/view?usp=sharing" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/19VcsGub-6nBnlHdQg2KnhNZiPAFmj2n-/view?usp=sharing"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
                         <i class="fas fa-globe text-secondary-color"></i>
                     </div>
@@ -996,13 +1117,15 @@ body {
                         <p class="text-gray-300">Cross-cultural dialogue on social media polarization (2025)</p>
                     </div>
                 </a>
-                <a href="https://drive.google.com/file/d/1F5VwGOW_Q35J1-ElZ0mw3ebr-tIzvz-x/view?usp=drive_link" target="_blank" class="certification-card">
+                <a href="https://drive.google.com/file/d/1F5VwGOW_Q35J1-ElZ0mw3ebr-tIzvz-x/view?usp=drive_link"
+                    target="_blank" class="certification-card">
                     <div class="certification-icon">
-                          <i class="fa-solid fa-certificate"></i>
+                        <i class="fa-solid fa-certificate"></i>
                     </div>
                     <div class="certification-content">
                         <h3 class="text-lg font-semibold text-white">Nile University 20th UGRF</h3>
-                        <p class="text-gray-300">Certificate of Participation in the 1st International Junior Researcher Competition (2025)</p>
+                        <p class="text-gray-300">Certificate of Participation in the 1st International Junior Researcher
+                            Competition (2025)</p>
                     </div>
                 </a>
             </div>
@@ -1018,14 +1141,16 @@ body {
                         <i class="fas fa-envelope text-secondary-color text-3xl"></i>
                         <div>
                             <h3 class="text-xl font-semibold text-white">Email</h3>
-                            <a href="mailto:ezzm80618@gmail.com" class="text-gray-300 hover:text-secondary-color">ezzm80618@gmail.com</a>
+                            <a href="mailto:ezzm80618@gmail.com"
+                                class="text-gray-300 hover:text-secondary-color">ezzm80618@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone text-secondary-color text-3xl"></i>
                         <div>
                             <h3 class="text-xl font-semibold text-white">Phone</h3>
-                            <a href="tel:+201150682120" class="text-gray-300 hover:text-secondary-color">+20 115 068 2120</a>
+                            <a href="tel:+201150682120" class="text-gray-300 hover:text-secondary-color">+20 115 068
+                                2120</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1039,14 +1164,16 @@ body {
                         <i class="fab fa-linkedin text-secondary-color text-3xl"></i>
                         <div>
                             <h3 class="text-xl font-semibold text-white">LinkedIn</h3>
-                            <a href="http://www.linkedin.com/in/ezzeldeenmohamed" target="_blank" class="text-gray-300 hover:text-secondary-color">linkedin.com/in/ezzeldeenmohamed</a>
+                            <a href="http://www.linkedin.com/in/ezzeldeenmohamed" target="_blank"
+                                class="text-gray-300 hover:text-secondary-color">linkedin.com/in/ezzeldeenmohamed</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github text-secondary-color text-3xl"></i>
                         <div>
                             <h3 class="text-xl font-semibold text-white">GitHub</h3>
-                            <a href="https://github.com/Ezzeldeen-Mohamed" target="_blank" class="text-gray-300 hover:text-secondary-color">github.com/Ezzeldeen-Mohamed</a>
+                            <a href="https://github.com/Ezzeldeen-Mohamed" target="_blank"
+                                class="text-gray-300 hover:text-secondary-color">github.com/Ezzeldeen-Mohamed</a>
                         </div>
                     </div>
                 </div>
@@ -1088,9 +1215,12 @@ body {
                 <div class="footer-social">
                     <h3 class="text-lg font-semibold text-white mb-4">Connect</h3>
                     <div class="social-icons flex justify-center gap-6">
-                        <a href="https://github.com/Ezzeldeen-Mohamed" target="_blank" class="text-white hover:text-secondary-color"><i class="fab fa-github"></i></a>
-                        <a href="http://www.linkedin.com/in/ezzeldeenmohamed" target="_blank" class="text-white hover:text-secondary-color"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:ezzm80618@gmail.com" class="text-white hover:text-secondary-color"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Ezzeldeen-Mohamed" target="_blank"
+                            class="text-white hover:text-secondary-color"><i class="fab fa-github"></i></a>
+                        <a href="http://www.linkedin.com/in/ezzeldeenmohamed" target="_blank"
+                            class="text-white hover:text-secondary-color"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:ezzm80618@gmail.com" class="text-white hover:text-secondary-color"><i
+                                class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -1143,7 +1273,7 @@ body {
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth',
@@ -1225,11 +1355,12 @@ body {
         });
 
         // Form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Message sent! Ezzeldeen will get back to you soon.');
             this.reset();
         });
     </script>
 </body>
+
 </html>
